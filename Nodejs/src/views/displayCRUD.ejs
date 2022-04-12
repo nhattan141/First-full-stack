@@ -26,6 +26,7 @@
                     <th>Phonenumber</th>
                     <th>Gender</th>
                     <th>Role</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,11 +48,15 @@
                             <%= dataTable[i].phonenumber %>
                         </td>
                         <td>
-                            <%= dataTable[i].gender===1 ? 'Male' : 'Female' %>
+                            <%= dataTable[i].gender==1 ? 'Male' : 'Female' %>
                         </td>
                         <td>
-                            <%= dataTable[i].roleId==='1' ? 'Admin' : dataTable[i].roleId==='2' ? 'Doctor' : 'Patient'
-                                %>
+                            <%= dataTable[i].roleId=='1' ? 'Admin' : dataTable[i].roleId=='2' ? 'Doctor' : 'Patient' %>
+                        </td>
+                        <td>
+                            <a href="/edit-crud?id=<%= dataTable[i].id %>" type="button"
+                                class="btn btn-outline-success">Edit</a>
+                            <a href="#" type="button" class="btn btn-outline-danger">Delete</a>
                         </td>
                     </tr>
                     <% } %>
