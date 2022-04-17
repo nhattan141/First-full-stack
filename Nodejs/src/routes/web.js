@@ -16,6 +16,8 @@ let initwebRoutes = (app) => {
     //rest api
 
     router.post('/api/login', userController.handleLogin);
+    router.get('/api/get-all-user', userController.handleGetAllUser);
+
     return app.use("/", router)
 }
 module.exports = initwebRoutes;
