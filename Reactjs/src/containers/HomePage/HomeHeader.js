@@ -10,10 +10,18 @@ import icon5 from "../../assets/icon5.png";
 import icon6 from "../../assets/icon6.png";
 import icon7 from "../../assets/icon7.png";
 import { FormattedMessage } from 'react-intl';
+import { LANGUAGES } from '../../utils/constant';
+import { changeLanguageApp } from '../../store/actions';
 
 class HomeHeader extends Component {
 
+    changeLanguage = (language) => {
+        this.props.changeLanguageAppRedux(language)
+    }
+
     render() {
+        let language = this.props.language;
+
         return (
             <>
                 <div className="home-header-container">
@@ -61,11 +69,11 @@ class HomeHeader extends Component {
                                 <i className="fas fa-question-circle"></i>
                                 <FormattedMessage id="homeheader.support" />
                             </div>
-                            <div className="language-vi">
-                                VN
+                            <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}>
+                                <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VI</span>
                             </div>
-                            <div className="language-en">
-                                EN
+                            <div className={language === LANGUAGES.EN ? 'language-en active' : 'language-en'}>
+                                <span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span>
                             </div>
                         </div>
                     </div>
@@ -79,7 +87,7 @@ class HomeHeader extends Component {
                             <FormattedMessage id="banner.title2" />
                         </div>
                         <div className="search">
-                            <i class="fas fa-search"></i>
+                            <i className="fas fa-search"></i>
                             <input type="text" placeholder="Tìm chuyên khoa khám bệnh" />
                         </div>
                     </div>
@@ -183,6 +191,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        changeLanguageAppRedux: (language) => dispatch(changeLanguageApp(language))
     };
 };
 
