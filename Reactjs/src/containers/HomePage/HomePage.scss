@@ -1,0 +1,135 @@
+//reset slick slider css
+.slick-prev {
+    border: 2px solid #d7d7d7 !important;
+    // position: relative !important;
+    left: -10px !important;
+    z-index: 1000;
+    height: 48px !important;
+    width: 44px !important;
+    background: #ffff !important;
+
+    &:hover {
+        background: #eceaca !important;
+    }
+}
+.slick-prev:before,
+.slick-next:before {
+    font-family: FontAwesome !important;
+    // content: "\e5cb" !important; //unicode
+    color: grey !important;
+}
+
+.slick-next {
+    border: 2px solid #d7d7d7 !important;
+    right: -10px !important;
+    height: 48px !important;
+    width: 44px !important;
+    background: #ffff !important;
+
+    &:hover {
+        background: #eceaca !important;
+    }
+}
+// .slick-next:before {
+//     content: "\e5cc" !important;
+//     color: grey !important;
+// }
+.section-share {
+    &.section-specialty {
+        background: #f5f5f5;
+    }
+
+    &.section-outstanding-doctor {
+        background: #f5f5f5;
+    }
+
+    .section-body {
+        .section-customize {
+            cursor: pointer;
+
+            &:hover {
+                color: #49bce2;
+            }
+            .bg-image {
+                height: 150px;
+                width: 278px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: #eee;
+
+                &.section-specialty {
+                    background-image: url("../../assets/specialty/co-xuong-khop.jpg");
+                }
+
+                &.section-medical-facility {
+                    background-image: url("../../assets/medical-facility/bv-an-viet1.jpg");
+                }
+
+                &.section-oustanding-doctor {
+                    background-image: url("../../assets/outstanding-doctor/anh-dai-dien-bs.jpg");
+                    height: 120px;
+                    width: 120px;
+                    border-radius: 50%;
+                }
+
+                &.section-handbook {
+                    background-image: url("../../assets/handbook/benh-tieu-duong.jpg");
+                }
+            }
+        }
+    }
+}
+
+.section-share {
+    height: 330px;
+
+    .section-container {
+        margin: 0 100px;
+        display: flex;
+        flex-direction: column;
+
+        .section-header {
+            height: 60px;
+            margin-bottom: 30px;
+            padding-top: 30px;
+
+            .title-section {
+                font-size: 22px;
+                font-weight: 600;
+            }
+
+            .btn-section {
+                float: right;
+                padding: 10px 15px;
+                border: none;
+                outline: none;
+                display: block;
+                background: #ebebeb;
+                cursor: pointer;
+
+                &:hover {
+                    color: #ffff;
+                    background: #f7d800;
+                }
+            }
+        }
+    }
+}
+
+.section-outstanding-doctor {
+    .outer-bg {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .section-customize {
+        padding: 5px;
+
+        .customize-border {
+            border: 1px solid #d1d0d0;
+            padding: 20px;
+        }
+    }
+}
