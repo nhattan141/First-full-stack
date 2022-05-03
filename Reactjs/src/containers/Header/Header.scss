@@ -20,4 +20,36 @@
             font-size: $base-size + 1px;
         }
     }
+
+    .languages {
+        .language-en {
+            margin-right: 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            opacity: 0.5;
+
+            &.active {
+                opacity: 1;
+                color: #49bce2;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        .language-vi {
+            cursor: pointer;
+            opacity: 0.5;
+
+            &.active {
+                opacity: 1;
+                color: #f7d800;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
 }
